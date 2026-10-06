@@ -26,7 +26,7 @@ with tarfile.open(archive) as tar:
     with tar.extractfile(member) as stream,(resources/'bin/uv').open('wb') as output:shutil.copyfileobj(stream,output)
 (resources/'bin/uv').chmod(0o755)
 for source in ROOT.glob('*.py'):shutil.copy2(source,resources/source.name)
-for folder in ('public','host'):shutil.copytree(ROOT/folder,resources/folder)
+for folder in ('public','host'):shutil.copytree(ROOT/folder,resources/folder,ignore=shutil.ignore_patterns('__pycache__','*.pyc','.DS_Store'))
 shutil.copy2(ROOT/'requirements.txt',resources/'requirements.txt')
 shutil.copy2(ROOT/'THIRD_PARTY.md',resources/'THIRD_PARTY.md')
 for license_name in ('LICENSE-MIT','LICENSE-APACHE'):
