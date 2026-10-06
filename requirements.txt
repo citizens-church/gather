@@ -1,0 +1,18 @@
+parakeet-mlx==0.5.3
+ctranslate2==4.8.2
+sentencepiece==0.2.2
+fastapi==0.142.2
+uvicorn==0.54.0
+python-multipart==0.0.32
+qrcode==8.2
+websockets>=15,<17
+mlx-lm==0.31.1
+lingua-language-detector==2.2.0
+kokoro-onnx==0.5.0
+onnxruntime==1.30.0
+soundfile==0.13.1
+supertonic==1.3.1
+yt-dlp[default]==2026.8.19
+outlines==1.3.3
+spacy==3.8.11
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

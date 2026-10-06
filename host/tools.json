@@ -1,0 +1,29 @@
+{
+  "node": {
+    "version": "v22.23.3",
+    "file": "node-v22.23.3-darwin-arm64.tar.xz",
+    "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-darwin-arm64.tar.xz",
+    "sha256": "72d5d8832b41c9d9646197af614ffd751406ea4d215060eb91b98864e1919a3e",
+    "size": 25876024
+  },
+  "ffmpeg": {
+    "url": "https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-darwin-arm64.gz",
+    "sha256": "8923876afa8db5585022d7860ec7e589af192f441c56793971276d450ed3bbfa",
+    "size": 19246198
+  },
+  "ffprobe": {
+    "url": "https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-darwin-arm64.gz",
+    "sha256": "d986a8ec7b030899fe66a8a288ed809a3543338705a3ce178cfb85869c5d80be",
+    "size": 19207077
+  },
+  "ffmpeg-license": {
+    "url": "https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/darwin-arm64.LICENSE",
+    "sha256": "cb48bf09a11f5fb576cddb0431c8f5ed0a60157a9ec942adffc13907cbe083f2",
+    "size": 4376
+  },
+  "ffmpeg-readme": {
+    "url": "https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/darwin-arm64.README",
+    "sha256": "05ba4b92c96605434b1aaae3eedf5a2c280c9607bf78ffca9a5b536d9af2dc6a",
+    "size": 1810
+  }
+}

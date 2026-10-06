@@ -1,0 +1,1 @@
+{"name":"gather-site-checks","private":true,"version":"0.1.0","type":"module","scripts":{"test:site":"node proof/site_check.mjs"},"devDependencies":{"@playwright/test":"1.63.0"}}

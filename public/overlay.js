@@ -1,0 +1,2 @@
+const params=new URLSearchParams(location.search),lang=params.get('lang')||'es',room=params.get('room');const caption=document.getElementById('caption');
+const events=new EventSource(`/api/events?room=${encodeURIComponent(room||'')}`);events.onmessage=event=>{const d=JSON.parse(event.data);if(d.kind==='reset'){caption.textContent='';}if(d.kind==='snapshot'){const s=d.session.segments.at(-1);caption.textContent=s?.translations[lang]||'';}if(d.kind==='segment'){caption.textContent=d.segment.translations[lang]||'';}if(d.kind==='resync'){events.close();location.reload();}};
