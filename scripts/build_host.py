@@ -31,7 +31,7 @@ shutil.copy2(ROOT/'requirements.txt',resources/'requirements.txt')
 shutil.copy2(ROOT/'THIRD_PARTY.md',resources/'THIRD_PARTY.md')
 for license_name in ('LICENSE-MIT','LICENSE-APACHE'):
     (resources/'bin'/('uv-'+license_name)).write_bytes(urllib.request.urlopen('https://raw.githubusercontent.com/astral-sh/uv/'+version+'/'+license_name).read())
-plist={'CFBundleName':'Gather Host','CFBundleDisplayName':'Gather Host','CFBundleIdentifier':'church.citizens.gather.host','CFBundleExecutable':'GatherHost','CFBundlePackageType':'APPL','CFBundleShortVersionString':'0.1.0','CFBundleVersion':'1','LSMinimumSystemVersion':'14.0','NSLocalNetworkUsageDescription':'Gather shares translated sermon audio with listeners on your church network.','CFBundleURLTypes':[{'CFBundleURLName':'Gather Host','CFBundleURLSchemes':['gather']}],'NSHighResolutionCapable':True}
+plist={'CFBundleName':'Gather Host','CFBundleDisplayName':'Gather Host','CFBundleIdentifier':'church.citizens.gather.host','CFBundleExecutable':'GatherHost','CFBundlePackageType':'APPL','CFBundleShortVersionString':'0.1.1','CFBundleVersion':'2','LSMinimumSystemVersion':'14.0','NSLocalNetworkUsageDescription':'Gather shares translated sermon audio with listeners on your church network.','CFBundleURLTypes':[{'CFBundleURLName':'Gather Host','CFBundleURLSchemes':['gather']}],'NSHighResolutionCapable':True}
 (contents/'Info.plist').write_bytes(plistlib.dumps(plist))
 subprocess.run(['xcrun','swiftc',str(ROOT/'host/GatherHost.swift'),'-o',str(binary/'GatherHost'),'-target','arm64-apple-macos14.0','-framework','AppKit'],check=True)
 subprocess.run(['codesign','--force','--deep','--sign','-',str(app)],check=True)

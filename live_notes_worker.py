@@ -28,7 +28,11 @@ def main():
     os.nice(10);engine=None
     if os.getenv('GATHER_NOTES_CPU')=='1':
         import mlx.core as mx
+        import importlib
         mx.set_default_device(mx.cpu)
+        # mlx-lm's Metal memory helper queries the default device even on CPU.
+        # CPU-only CI needs no GPU wired-memory limit.
+        importlib.import_module('mlx_lm.generate').wired_limit=lambda *_:contextlib.nullcontext()
     for line in sys.stdin:
         try:
             began=time.perf_counter();body=json.loads(line)
